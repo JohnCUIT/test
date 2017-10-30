@@ -22,5 +22,7 @@ typedef	struct
 	void* (*GetPrevNode)(void* this);
 }Node;
 
+Node* CreateNode(void* data);
+
 #endif //__NODE_H_
 
