@@ -14,12 +14,9 @@
 
 typedef	struct
 {
-	void* pNext;
-	void* pPrev;
-	void* pData;
-	void* (*GetData)(void* this);
-	void* (*GetNextNode)(void* this);
-	void* (*GetPrevNode)(void* this);
+    void* pNext;
+    void* pPrev;
+    void* pData;
 }Node;
 
 Node* CreateNode(void* data);
