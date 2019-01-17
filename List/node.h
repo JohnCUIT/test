@@ -14,9 +14,9 @@
 
 typedef	struct
 {
+    void* pData;
     void* pNext;
     void* pPrev;
-    void* pData;
 }Node;
 
 Node* CreateNode(void* data);

@@ -16,9 +16,7 @@
 typedef	struct
 {
     Node* pHead;
-//    int curNodeindex;
     int (*GetSize)(void* this);
-//    Node* (*GetCurNode)(void* this);
     Node* (*GetNodeByIndex)(void* this, int index);
     Node* (*InsertNodeByIndex)(void* this, int index, Node* newNode);
     Node* (*AppendNode)(void* this, Node* newNode);
