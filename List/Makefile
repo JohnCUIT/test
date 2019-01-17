@@ -1,13 +1,17 @@
-list: node.o list.o main.o
-	gcc -o list node.o list.o main.o
+target = lib/liblist.so
 
-node.o:
+VPATH = src:include
+CFLAG = -I ./include
 
-list.o: node.o
+objects = src/list.o src/node.o
 
-main.o: node.o list.o
+all: $(objects)
+	gcc -shared -o ${target} $(objects)
+
+$(objects): %.o: %.c
+	gcc -c -fPIC $(CFLAG) $< -o $@
 
 .PHONY: clean
 
 clean:
-	rm -fr list *.o
+	rm -fr ${target} $(objects)
